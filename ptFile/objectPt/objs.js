@@ -14,6 +14,10 @@ function Ninja(name, health = 100) {
         this.health += 10;
         console.log(this.health);
     }
+    this.punch = function(object) {
+        object.health = object.health-15;
+        console.log(object);
+    }
 
 }
 
@@ -21,3 +25,5 @@ let menhaj = new Ninja("Menhaj", 90);
 menhaj.sayName();
 menhaj.showStats();
 menhaj.drinkSake();
+let james = new Ninja("James", 100);
+menhaj.punch(james);
